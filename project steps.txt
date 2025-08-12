@@ -1,0 +1,16 @@
+Open anaconda	
+conda create -n tf python=3.6 [Enter] to proceed press y and enter
+activate tf
+pip install pillow
+pip install pandas
+pip install seaborn
+pip install scikit-learn
+pip install flask
+pip install flask-socketio
+pip install bs4
+pip install tldextract
+pip install python-whois
+pip install requests
+pip install lightgbm
+
+

@@ -1,0 +1,294 @@
+/* ===== Base Page ===== */
+body {
+    background-color: #0D0D0D;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Layout & Navigation ===== */
+.centered-logo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 0;
+    background: #0d0d0d;
+    border-bottom: 1px solid #222;
+}
+
+.trusturl-logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-img {
+    width: 72px;
+    height: 72px;
+    display: inline-block;
+}
+
+.logo-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #57e38f;
+    user-select: none;
+}
+
+.trusturl-nav a {
+    color: #ccc;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.trusturl-nav a:hover {
+    color: #7653ff;
+}
+
+/* ===== Containers & Main Content ===== */
+.trusturl-main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+}
+.trusturl-card {
+    width: 97%;
+    max-width: 900px;
+    background: #1b1d24;
+    border-radius: 14px;
+    padding: 30px 20px;
+    margin: 0 auto 40px auto;
+    box-shadow: 0 6px 40px rgba(58,82,119,0.13);
+}
+
+/* ===== Description Panel ===== */
+.trusturl-description {
+    background: #191c23;
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    border: 1px solid #232535;
+    color: #a7afc4;
+    margin-bottom: 1.8em;
+    font-size: 1.06rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* ===== URL Form ===== */
+.trusturl-urlform {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 1.6em;
+}
+.trusturl-urlinput {
+    flex: 1 1 0;
+    background: #181b25;
+    color: #d1d5db;
+    border: 1px solid #232535;
+    border-radius: 7px;
+    font-size: 1.08rem;
+    padding: 0.78em 1em;
+    outline: none;
+    transition: border 0.2s;
+    font-family: inherit;
+}
+.trusturl-urlinput:focus {
+    border-color: #57e38f;
+    background: #171d20;
+}
+.trusturl-form-btn {
+    background: linear-gradient(90deg, #57e38f 55%, #2fca59 100%);
+    color: #15462d;
+    font-weight: 700;
+    border-radius: 7px;
+    padding: 0.6em 1.3em;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.trusturl-form-btn:hover {
+    background: linear-gradient(90deg, #68ffc4 40%, #36f280 100%);
+    color: #0f262a;
+}
+
+/* ===== Results Sections ===== */
+.trusturl-results-header {
+    color: #90faa8;
+    font-size: 1.13rem;
+    font-weight: 600;
+    margin-bottom: 1.6em;
+}
+.trusturl-results {
+    width: 100%;
+}
+.trusturl-score-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.1em;
+}
+.trusturl-score-label {
+    background: #192526;
+    padding: 0.3em 0.68em;
+    color: #9cf3b7;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 0.8em;
+    border-radius: 6px;
+}
+.trusturl-score-value {
+    background: #17543d;
+    color: #afe3c4;
+    border-radius: 5px;
+    padding: 0.29em 0.7em;
+    font-weight: 700;
+    font-size: 1.16rem;
+}
+.trusturl-safe-status {
+    display: block;
+    margin-top: 0.3em;
+    margin-bottom: 0.2em;
+    font-weight: 700;
+    font-size: 1.045rem;
+    color: #57e38f;
+}
+.trusturl-url {
+    color: #859fc6;
+    font-size: 1rem;
+    margin-bottom: 1.15em;
+    display: block;
+}
+.trusturl-btn-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 1.2em;
+}
+
+/* Buttons */
+.trusturl-action-btn {
+    padding: 0.5em 1em;
+    border: none;
+    background: #20263b;
+    color: #e2ffe4;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.02rem;
+    cursor: pointer;
+    transition: background 0.22s;
+}
+.trusturl-action-btn:hover {
+    background: #57e38f;
+    color: #12151c;
+}
+
+/* Small Results Table */
+.trusturl-table {
+    width: 100%;
+    background: #151923;
+    border-radius: 7px;
+    margin-top: 10px;
+    font-size: 0.98rem;
+    border-collapse: collapse;
+}
+.trusturl-table td,
+.trusturl-table th {
+    padding: 10px 12px;
+    border-bottom: 1px solid #232535;
+    text-align: left !important;
+}
+.trusturl-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== Bounded Section Boxes ===== */
+.trusturl-sectionbox.strong-bounded-box {
+    background: #232946;
+    border-radius: 10px;
+    margin: 27px 0 0 0;
+    padding: 20px 10px;
+    box-shadow: 0 2px 18px #19223a10;
+    border: 2px solid #37415c;
+}
+.trusturl-sectiontitle {
+    font-size: 1.09rem;
+    font-weight: 600;
+    color: #73ffcb;
+    margin-bottom: 1em;
+}
+.scroll-table-wrap {
+    max-height: 340px;
+    overflow-x: auto;
+    overflow-y: auto;
+    background: #1e2130;
+    border-radius: 7px;
+}
+
+/* ===== Strong Bounded Tables ===== */
+.table-view.strong-bounded-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 2px solid #37415c;
+    background: #1e2130;
+    table-layout: fixed;
+}
+.table-view.strong-bounded-table td,
+.table-view.strong-bounded-table th {
+    border: 1px solid #37415c;
+    padding: 9px 10px;
+    color: #e2e8f0;
+    max-width: 350px;
+    vertical-align: top;
+    word-break: break-all;
+    white-space: pre-wrap;
+    text-align: left !important;
+}
+.table-view.strong-bounded-table th {
+    background: #212844;
+    color: #72ffd1;
+    font-weight: bold;
+}
+.table-view.strong-bounded-table tr:last-child td {
+    border-bottom: 1px solid #37415c;
+}
+
+/* ===== Footer ===== */
+.trusturl-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 35px;
+    font-size: 0.97rem;
+    color: #708bb0;
+    border-top: 1px solid #22242f;
+}
+.trusturl-footer a {
+    color: #57e38f;
+    text-decoration: none;
+}
+.trusturl-footer a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+    .trusturl-urlform { flex-direction: column; }
+    .trusturl-form-btn { width: 100%; }
+    .trusturl-urlinput { width: 100%; }
+    .trusturl-btn-row { flex-direction: column; gap: 8px; }
+}
+
+table td,
+table th,
+.table-view td,
+.table-view th,
+.trusturl-table td,
+.trusturl-table th,
+.strong-bounded-table td,
+.strong-bounded-table th {
+    text-align: left !important;
+}

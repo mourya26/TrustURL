@@ -1,0 +1,11 @@
+pillow
+pandas
+seaborn
+scikit-learn
+flask
+flask-socketio
+bs4
+tldextract
+python-whois
+requests
+lightgbm
