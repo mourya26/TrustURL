@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_IMAGE = "mourya26/trusturl"   // Your Docker Hub repo name
+        DOCKER_IMAGE = "mourya26/trusturl"
         DOCKER_TAG   = "latest"
         CONTAINER_NAME = "trusturl-container"
     }
@@ -32,8 +32,9 @@ pipeline {
         stage('Deploy Container') {
             steps {
                 script {
-                    bat "docker stop %CONTAINER_NAME% || exit 0"
-                    bat "docker rm %CONTAINER_NAME% || exit 0"
+                    // Stop and remove old container without failing the build if it doesn't exist
+                    bat "docker ps -q -f name=%CONTAINER_NAME% && docker stop %CONTAINER_NAME%"
+                    bat "docker ps -a -q -f name=%CONTAINER_NAME% && docker rm %CONTAINER_NAME%"
                     bat "docker run -d --name %CONTAINER_NAME% -p 5000:5000 %DOCKER_IMAGE%:%DOCKER_TAG%"
                 }
             }
