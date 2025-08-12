@@ -16,7 +16,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t $DOCKER_IMAGE:$DOCKER_TAG .'
+                    bat 'docker build -t $DOCKER_IMAGE:$DOCKER_TAG .'
                 }
             }
         }
@@ -24,8 +24,8 @@ pipeline {
         stage('Push to Docker Hub') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
-                    sh 'echo $PASSWORD | docker login -u $USERNAME --password-stdin'
-                    sh 'docker push $DOCKER_IMAGE:$DOCKER_TAG'
+                    bat 'echo $PASSWORD | docker login -u $USERNAME --password-stdin'
+                    bat 'docker push $DOCKER_IMAGE:$DOCKER_TAG'
                 }
             }
         }
@@ -33,8 +33,8 @@ pipeline {
         stage('Deploy Container') {
             steps {
                 script {
-                    sh 'docker rm -f trusturl || true'
-                    sh 'docker run -d --name trusturl -p 5000:5000 $DOCKER_IMAGE:$DOCKER_TAG'
+                    bat 'docker rm -f trusturl || true'
+                    bat 'docker run -d --name trusturl -p 5000:5000 $DOCKER_IMAGE:$DOCKER_TAG'
                 }
             }
         }
